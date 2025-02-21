@@ -50,9 +50,9 @@ function getOrderSummary() {
 
 	return `
     <h2 id="order-summary-header">Your order</h2>
-    ${orderHTML}
+    ${orderHTML}</article>
     <article class="order-total">
-        <h2 id="order-total-header">Total price:</h2>
+        <h2 class="order-total-header">Total price:</h2>
         <p class="price">$${totalPrice}</p>
     </article>
     <button id="complete-order-btn">Complete order</button>

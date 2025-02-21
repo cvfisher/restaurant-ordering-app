@@ -1,10 +1,33 @@
 :root {
+	/* Spacing */
 	--form-spacing: 1.375rem;
 	--medium-spacing: 2.5rem;
+	--large-spacing: 3.5rem;
+	--small-spacing: 1rem;
 
+	/* Font Size */
 	--large-font: 2.5rem;
 	--medium-font: 1.75rem;
 	--small-font: 1.25rem;
+	--extra-small-font: 1rem;
+
+	/* Color */
+	--dark-bg: #393333;
+	--light-bg: #fff;
+	--accent-color: #16db99;
+	--neutral-color: #8b8b8b;
+	--border-color: #d2d2d2;
+	--shadow-color: #00000080;
+
+	/* Button */
+	--btn-width: 100%;
+	--btn-padding: 1rem;
+	--btn-font-family: "Verdana", Geneva, Tahoma, sans-serif;
+	--btn-font-weight: 700;
+	--btn-color: #fff;
+	--btn-background: #16db99;
+	--btn-hover-bg: #3c3c3c;
+	--btn-hover-color: #fff;
 }
 
 body {
@@ -16,30 +39,27 @@ body {
 header {
 	background-image: url("./images/bg\ img.svg");
 	background-size: cover;
-	/* min-width: 600px; */
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 3.5rem 2.875rem;
+	padding: var(--large-spacing) var(--small-spacing);
 	border: 1px solid red;
 }
 
 h1 {
 	font-size: var(--large-font);
+	color: var(--btn-color);
 }
 
 h2,
 h3 {
 	font-size: var(--medium-font);
+	color: var(--btn-color);
 }
 
-/* h3 {
-	line-height: 1;
-} */
-
 #ingredients {
-	color: #8b8b8b;
+	color: var(--neutral-color);
 }
 
 #price {
@@ -47,8 +67,7 @@ h3 {
 }
 
 h1,
-#subtitle {
-	color: #fff;
+.subtitle {
 	font-weight: 100;
 }
 
@@ -57,8 +76,8 @@ h1,
 	align-items: center;
 	justify-content: space-between;
 	gap: 30px;
-	padding: 2.8125rem;
-	border-bottom: 1px solid #d2d2d2;
+	padding: var(--medium-spacing);
+	border-bottom: 1px solid var(--border-color);
 }
 
 .menu-item-text {
@@ -82,16 +101,17 @@ h1,
 	font-size: 2rem;
 	font-weight: 200;
 	border: 1px solid #dedede;
-	background-color: #fff;
-	color: #3c3c3c;
+	background-color: var(--light-bg);
+	color: var(--neutral-color);
 	padding: 0;
 	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
 }
 
 .add-to-basket-btn:active,
 .add-to-basket-btn:hover {
-	background-color: #3c3c3c;
-	color: #fff;
+	background-color: var(--btn-hover-bg);
+	color: var(--btn-hover-color);
 }
 
 #order-summary-header {
@@ -102,6 +122,11 @@ h1,
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding-bottom: var(--form-spacing);
+}
+
+.order-item:last-child {
+	padding-bottom: 1.875rem;
 }
 
 .order-name-remove {
@@ -112,10 +137,11 @@ h1,
 .order-total {
 	display: flex;
 	justify-content: space-between;
-	border-top: 2px solid #393333;
+	border-top: 2px solid var(--dark-bg);
+	padding: var(--small-spacing) 0 var(--medium-spacing) 0;
 }
 
-#remove-btn {
+.remove-btn {
 	border: none;
 	background: transparent;
 	cursor: pointer;
@@ -124,21 +150,27 @@ h1,
 #complete-order-btn,
 .submit-payment-btn {
 	border: none;
-	width: 100%;
+	width: var(--btn-width);
 	line-height: 24px;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-weight: 700;
-	background: #16db99;
-	color: #fff;
-	padding: 1rem;
+	font-family: var(--btn-font-family);
+	font-weight: var(--btn-font-weight);
+	background: var(--accent-color);
+	color: var(--btn-color);
+	padding: var(--btn-padding);
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.complete-order-btn {
+	margin-bottom: 1rem;
 }
 
 .payment-modal {
 	position: fixed;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	top: 50%; /* Vertically center */
-	left: 50%; /* Horizontally center */
-	transform: translate(-50%, -50%); /* Adjust for perfect centering */
+	font-family: var(--btn-font-family);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 100%;
 	max-width: 32.75rem;
 	height: 33.875rem;
@@ -146,10 +178,11 @@ h1,
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #fff;
-	box-shadow: 5px 5px #00000080;
+	background-color: var(--light-bg);
+	box-shadow: 5px 5px var(--shadow-color);
 	gap: var(--form-spacing);
 }
+
 .payment-form {
 	display: flex;
 	flex-direction: column;
@@ -168,10 +201,6 @@ input[type="text"] {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+	background: rgba(0, 0, 0, 0.5);
 	z-index: 999;
 }
-
-/* .submit-payment-btn {
-	height: 4.375rem;
-} */
