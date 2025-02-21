@@ -121,6 +121,7 @@ h1,
 
 #order-summary-header {
 	text-align: center;
+	padding-top: var(--medium-spacing);
 }
 
 .order-item {
