@@ -50,6 +50,10 @@ h1 {
 	color: var(--btn-color);
 }
 
+h2 {
+	font-size: var(--large-font);
+}
+
 .subtitle {
 	font-size: var(--medium-font);
 	color: var(--btn-color);
@@ -140,6 +144,10 @@ h1,
 	justify-content: space-between;
 	border-top: 2px solid var(--dark-bg);
 	padding: var(--small-spacing) 0 var(--medium-spacing) 0;
+}
+
+.order-total-header {
+	font-size: var(--medium-font);
 }
 
 .remove-btn {
