@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Restaurant Ordering App</title>
+		<link rel="preload" href="/images/bg img.svg" as="image" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Jimmy's Diner</h1>
+			<h2 id="subtitle">The best burgers and pizzas in town.</h2>
+		</header>
+		<main>
+			<section id="menu" aria-labelledby="menu"></section>
+
+			<section id="order-summary">
+				<h2 id="order-summary-header">Your order</h2>
+				<article class="order-item">
+					<div class="order-name-remove">
+						<h3>Pizza</h3>
+						<button id="remove-btn">remove</button>
+					</div>
+					<p class="price">$0</p>
+				</article>
+				<article class="order-total">
+					<h2 id="order-total-header">Total price:</h3>
+					<p class="price">$0</p>
+				</article>
+				<button id="complete-order-btn">Complete order</button>
+			</section>
+		</main>
+		<script src="./script.js" type="module"></script>
+	</body>
+</html>
